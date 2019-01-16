@@ -3,10 +3,7 @@
     <Navbar></Navbar>
 
     <div class="container">
-      <div class="blog-container">
-        <!-- <router-view></router-view> -->
-        aabvc
-      </div>
+      <router-view></router-view>
     </div>
   </div>
 </template>
@@ -44,20 +41,18 @@ body {
   background: linear-gradient(#dee2eb 0%, #adbee4 100%);
   background-repeat: no-repeat;
   font-size: 25px;
+  color: #9da3af;
 }
-a {
-  color: #f0f1f5;
-  text-decoration: none;
-}
+
 #app {
-  height: 90vh;
+  height: 93vh;
   width: 95vw;
   margin: 0 auto;
   border-radius: 5px;
   background: #f0f1f5;
   box-shadow: 20px 20px 6px rgba(0, 0, 0, 0.16);
   display: grid;
-  grid-template-rows: 18% auto;
+  grid-template-rows: 22% auto;
   justify-content: center;
 }
 .container {
@@ -71,7 +66,10 @@ a {
   width: 89vw;
 
   background: #fff;
-  transform: translateY(-4.5rem);
+  transform: translateY(-5.3rem);
   border-radius: 5px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 20% 60% 20%;
 }
 </style>

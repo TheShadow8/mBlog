@@ -12,9 +12,10 @@
         <router-link to="/about">About</router-link>
       </div>
     </div>
-    <div class="nav-right">
-      <router-link class="btn btn-primary" to="/add">Add</router-link>
-    </div>
+
+    <router-link class="btn btn-primary" to="/add">
+      <div class="nav-right">Add</div>
+    </router-link>
   </nav>
 </template>
 
@@ -36,27 +37,44 @@ export default {
   text-align: center;
   color: #f0f1f5;
 }
+.navbar a {
+  color: #f0f1f5;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #9da3af;
+}
 
 .nav-left {
   display: flex;
-  align-items: center;
 }
 
 .nav-left > * {
-  margin-right: 1rem;
+  margin-right: 2rem;
+}
+
+.nav-left div {
+  margin-top: 5rem;
 }
 
 .logo {
-  height: 10rem;
-  width: 10rem;
-  margin-left: 2rem;
+  height: 12rem;
+  width: 12rem;
+  margin-left: 3.3rem;
 }
 
 .nav-right {
   background-color: #3770fc;
-  padding: 1rem 5rem;
+  padding: 1rem 6rem;
   border-radius: 50px;
-  margin-right: 5.8rem;
-  margin-top: 3rem;
+  margin-right: 5rem;
+  margin-top: 4.2rem;
+  cursor: pointer;
+}
+
+.nav-right:hover {
+  background-color: #9da3af;
+  color: #f0f1f5;
 }
 </style>

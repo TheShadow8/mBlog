@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+  <g id="trash-simple" transform="translate(-3 -1)">
+    <path id="Path_4" data-name="Path 4" d="M30.8,18V35.32a1.817,1.817,0,0,1-1.891,1.732H11.891A1.817,1.817,0,0,1,10,35.32V18" transform="translate(-3.402 -9.052)" fill="none" stroke="#9da3af" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2"/>
+    <line id="Line_2" data-name="Line 2" y2="9.526" transform="translate(17 12.838)" fill="none" stroke="#9da3af" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2"/>
+    <line id="Line_3" data-name="Line 3" y2="9.526" transform="translate(12.357 12.838)" fill="none" stroke="#9da3af" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2"/>
+    <line id="Line_4" data-name="Line 4" y2="9.526" transform="translate(21.643 12.838)" fill="none" stroke="#9da3af" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Path_5" data-name="Path 5" d="M22,6.33V2h8.66V6.33" transform="translate(-9.33 0)" fill="none" stroke="#9da3af" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2"/>
+    <line id="Line_5" data-name="Line 5" x1="26" transform="translate(4 6.33)" fill="none" stroke="#9da3af" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2"/>
+  </g>
+</svg>
