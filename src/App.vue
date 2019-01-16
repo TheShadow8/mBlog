@@ -1,43 +1,77 @@
 <template>
   <div id="app">
+    <Navbar></Navbar>
 
-    <nav class="navbar navbar-expand-sm navbar-light bg-light mb-3">
-      <div class="container">
-        <router-link class="navbar-brand" to="/">mBlog</router-link>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item mr-2">
-              <router-link to="/">Home</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link to="/about">About</router-link>
-            </li>
-          </ul>
-          <ul class="navbar-nav navbar-right">
-            <li class="nav-item">
-              <router-link class="btn btn-primary" to="/add">Add Blog</router-link>
-            </li>
-          </ul>
-        </div>
+    <div class="container">
+      <div class="blog-container">
+        <!-- <router-view></router-view> -->
+        aabvc
       </div>
-    </nav>
-
-    <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script>
-  import Alert from './components/Alert'
-  export default {
-    name: 'App'
-  }
+import Navbar from "./components/Navbar";
+export default {
+  name: "App",
 
+  components: {
+    Navbar
+  }
+};
 </script>
 
 <style>
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
 
+html {
+  /* This defines what 1rem is 1 rem = 10px; 10px/16px = 62.5% */
+  font-size: 62.5%;
+}
 
+body {
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 3rem;
+  font-family: "Times New Roman";
+  background: linear-gradient(#dee2eb 0%, #adbee4 100%);
+  background-repeat: no-repeat;
+  font-size: 25px;
+}
+a {
+  color: #f0f1f5;
+  text-decoration: none;
+}
+#app {
+  height: 90vh;
+  width: 95vw;
+  margin: 0 auto;
+  border-radius: 5px;
+  background: #f0f1f5;
+  box-shadow: 20px 20px 6px rgba(0, 0, 0, 0.16);
+  display: grid;
+  grid-template-rows: 18% auto;
+  justify-content: center;
+}
+.container {
+  width: 95vw;
+  display: grid;
+  justify-content: center;
+}
+
+.blog-container {
+  height: 73vh;
+  width: 89vw;
+
+  background: #fff;
+  transform: translateY(-4.5rem);
+  border-radius: 5px;
+}
 </style>
