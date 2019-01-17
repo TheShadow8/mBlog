@@ -139,7 +139,7 @@ body {
   }
 
   .blog-container {
-    box-shadow: 20px 20px 6px rgba(0, 0, 0, 0.16);
+    box-shadow: none;
     transform: none;
     border-radius: 0px;
     width: 100vw;
@@ -154,7 +154,7 @@ body {
   }
   .blog-container {
     box-shadow: none;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-rows: 15% 70% 15%;
   }
   .hero {

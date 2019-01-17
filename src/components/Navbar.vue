@@ -41,15 +41,11 @@ export default {
   name: "Navbar",
   methods: {
     isHome() {
-      console.log("isNotInConfig path:", this.$router.history.current["path"]);
       return (
         this.$router.history.current["path"] === "/" ||
         this.$router.history.current["path"] === "/about"
       );
     }
-  },
-  created() {
-    console.log(this.$router);
   }
 };
 </script>
