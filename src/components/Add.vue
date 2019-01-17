@@ -1,35 +1,32 @@
 <template>
-  <div class="add container">
-    <Alert v-if="alert" v-bind:message="alert"/>
-    <h1 class="page-header">Add Blog</h1>
-    <form v-on:submit="addBlog">
-      <div class="well">
-        <div class="form-group">
-          <label>Date</label>
-          <input type="date" class="form-control" placeholder="Date" v-model="blog.date">
-        </div>
-        <div class="form-group">
-          <label>Title</label>
-          <input type="text" class="form-control" placeholder="Title" v-model="blog.title">
-        </div>
-        <Images></Images>
-      </div>
-      <div class="well mt-5">
-        <h4>Blog Info</h4>
-        <div class="form-group">
-          <textarea class="form-control" rows="5" v-model="blog.detail"></textarea>
-        </div>
-      </div>
-
-      <button type="submit " class="btn btn-primary">Post</button>
-    </form>
+  <div class="blog-container">
+    <!-- <Alert v-if="alert" v-bind:message="alert"/> -->
+    <Header title="Add Blog"></Header>
+    <div class="form-container">
+      <form class="form" v-on:submit="addBlog">
+        <input type="date" placeholder="Date" v-model="blog.date">
+        
+        <input type="text" placeholder="Title" v-model="blog.title">
+        
+        <textarea
+          class="form-control"
+          rows="8"
+          v-model="blog.detail"
+          placeholder="How about you day ? :)"
+        ></textarea>
+        
+        <button type="submit" class="btn btn-post">Post</button>
+      </form>
+    </div>
+    <Hero></Hero>
   </div>
 </template>
 
 <script>
 import Alert from "./Alert";
-import Images from "./Images";
-
+// import Images from "./Images";
+import Header from "./Header";
+import Hero from "./Hero";
 export default {
   name: "add",
   data() {
@@ -80,14 +77,16 @@ export default {
   },
   created: function() {
     this.getToday();
+    console.log("aaaa", this.$router);
   },
   components: {
     Alert,
-    Images
+    Header,
+    Hero
   }
 };
 </script>
 
-<!-- Add "scoped " attribute to limit CSS to this component only -->
-<style scoped>
+
+<style>
 </style>

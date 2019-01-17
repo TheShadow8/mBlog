@@ -1,12 +1,15 @@
 <template>
-  <div class="header">{{ title }}</div>
+  <div class="header">
+    <div>{{ title }}</div>
+    <div class="date">{{ date }}</div>
+  </div>
 </template>
 
 
 <script>
 export default {
-  name: "header",
-  props: ["title"]
+  name: "main-header",
+  props: ["title", "date"]
 };
 </script>
 
@@ -18,5 +21,13 @@ export default {
   font-size: 3rem;
   font-weight: bold;
   color: #232440;
+  display: flex;
+  justify-content: space-between;
+}
+.date {
+  margin-right: 5rem;
+  font-size: 2.5rem;
+  font-weight: normal;
+  color: #9da3af;
 }
 </style>

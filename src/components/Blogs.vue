@@ -11,17 +11,14 @@
       </thead>
       <tbody>
         <tr class="blog-content" v-for="blog in blogs" :key="blog.id">
-          <td>{{blog.title}}</td>
+          <td>
+            <router-link class="blog-title" v-bind:to="'/blog/'+blog.id">{{blog.title}}</router-link>
+          </td>
           <td class="blog-options">
             {{blog.date}}
             <div class="blog-icon">
-              <router-link class="btn btn-default" v-bind:to="'/edit/'+blog.id">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="27.217"
-                  height="27.427"
-                  viewBox="0 0 27.217 27.427"
-                >
+              <router-link v-bind:to="'/edit/'+blog.id">
+                <svg xmlns="http://www.w3.org/2000/svg" width="27.217" viewBox="0 0 27.217 27.427">
                   <g id="pencil" transform="translate(-0.783 -0.617)">
                     <line
                       id="Line_6"
@@ -211,6 +208,9 @@ td {
   padding: 1.5rem;
 }
 
+.blog-title:hover {
+  color: #3770fc;
+}
 .blog-table {
   grid-row: 2/3;
 }

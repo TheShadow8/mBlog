@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar">
+  <nav class="navbar" :key="this.$route.fullPath">
     <div class="nav-left">
       <router-link to="/">
         <img class="logo" :src="'/static/images/favicon.png'">
@@ -13,15 +13,30 @@
       </div>
     </div>
 
-    <router-link class="btn btn-primary" to="/add">
-      <div class="nav-right">Add</div>
+    <router-link v-if="isHome()" to="/add">
+      <div class="nav-add">Add</div>
+    </router-link>
+    <router-link v-else to="/">
+      <div class="nav-back">Back</div>
     </router-link>
   </nav>
 </template>
 
 <script>
 export default {
-  name: "Navbar"
+  name: "Navbar",
+  methods: {
+    isHome() {
+      console.log("isNotInConfig path:", this.$router.history.current["path"]);
+      return (
+        this.$router.history.current["path"] === "/" ||
+        this.$router.history.current["path"] === "/about"
+      );
+    }
+  },
+  created() {
+    console.log(this.$router);
+  }
 };
 </script>
 
@@ -64,7 +79,8 @@ export default {
   margin-left: 3.3rem;
 }
 
-.nav-right {
+.nav-add,
+.btn {
   background-color: #3770fc;
   padding: 1rem 6rem;
   border-radius: 50px;
@@ -73,8 +89,20 @@ export default {
   cursor: pointer;
 }
 
-.nav-right:hover {
+.nav-add:hover {
   background-color: #9da3af;
   color: #f0f1f5;
+}
+.router-link-exact-active {
+  color: #3770fc !important;
+}
+
+.nav-back {
+  color: #9da3af;
+  margin-right: 7rem;
+  margin-top: 5rem;
+}
+.nav-back:hover {
+  color: #3770fc;
 }
 </style>

@@ -12,7 +12,6 @@
 </template>
 
 <script>
-import Alert from "./Alert";
 import Header from "./Header";
 import Hero from "./Hero";
 
