@@ -212,6 +212,7 @@ td {
   color: #3770fc;
 }
 .blog-table {
+  width: 100%;
   grid-row: 2/3;
 }
 .blog-options {
