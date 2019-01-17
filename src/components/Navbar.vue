@@ -1,23 +1,37 @@
 <template>
   <nav class="navbar" :key="this.$route.fullPath">
     <div class="nav-left">
-      <router-link to="/">
+      <router-link to="/" id="logo">
         <img class="logo" :src="'/static/images/favicon.png'">
       </router-link>
 
-      <div class="nav-item mr-2">
+      <div>
         <router-link to="/">Home</router-link>
       </div>
-      <div class="nav-item">
+      <div>
         <router-link to="/about">About</router-link>
       </div>
     </div>
 
     <router-link v-if="isHome()" to="/add">
+      <div class="nav-add-symbol" id="nav-add-symbol">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 40 40">
+          <path
+            id="Path_25"
+            data-name="Path 25"
+            d="M50,32.857H32.857V50H27.143V32.857H10V27.143H27.143V10h5.714V27.143H50Z"
+            transform="translate(-10 -10)"
+            fill="#f0f1f5"
+          ></path>
+        </svg>
+      </div>
+    </router-link>
+
+    <router-link id="nav-add" v-if="isHome()" to="/add">
       <div class="nav-add">Add</div>
     </router-link>
     <router-link v-else to="/">
-      <div class="nav-back">Back</div>
+      <div class="nav-back" id="nav-back">Back</div>
     </router-link>
   </nav>
 </template>
@@ -78,7 +92,9 @@ export default {
   width: 12rem;
   margin-left: 3.3rem;
 }
-
+.nav-add-symbol {
+  display: none;
+}
 .nav-add,
 .btn {
   background-color: #3770fc;

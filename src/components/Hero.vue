@@ -62,13 +62,13 @@ export default {
   width: 100%;
 }
 
-.image {
+/* .image {
   background-size: cover;
   border-radius: 0 5px 5px 0;
   background-blend-mode: screen;
   background-position: center;
   height: 100%;
   width: 100%;
-  /* background-image: url(../assets/love-1.jpg); */
-}
+  background-image: url(../assets/love-1.jpg);
+} */
 </style>

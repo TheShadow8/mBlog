@@ -16,7 +16,7 @@
           </td>
           <td class="blog-options">
             {{blog.date}}
-            <div class="blog-icon">
+            <div class="blog-icon" id="blog-icon">
               <router-link v-bind:to="'/edit/'+blog.id">
                 <svg xmlns="http://www.w3.org/2000/svg" width="27.217" viewBox="0 0 27.217 27.427">
                   <g id="pencil" transform="translate(-0.783 -0.617)">
