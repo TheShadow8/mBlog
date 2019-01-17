@@ -157,6 +157,9 @@ body {
     grid-template-columns: 100%;
     grid-template-rows: 15% 70% 15%;
   }
+  .blog-table {
+    grid-column: 1/-1;
+  }
   .hero {
     display: none;
   }
